@@ -1,0 +1,79 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ar.com.movilizame.pulsadorgrabador.MainActivity"
+    android:background="@android:color/black">
+
+
+
+    <ImageButton
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        app:srcCompat="@drawable/pulsador_p"
+        android:id="@+id/imageButton"
+        android:scaleType="centerInside"
+        android:cropToPadding="false"
+        android:saveEnabled="false"
+        android:elevation="0dp"
+        android:adjustViewBounds="false"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        app:elevation="7dp"
+        app:pressedTranslationZ="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="13dp"
+        android:clickable="true"
+        android:visibility="gone"
+        app:backgroundTint="?attr/actionModeSplitBackground"
+        app:rippleColor="@android:color/holo_red_dark"
+        app:fabSize="mini" />
+
+
+    <toan.android.floatingactionmenu.FloatingActionsMenu
+        android:id="@+id/multiple_actions_down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        fab:fab_addButtonColorNormal="@color/white"
+        fab:fab_addButtonColorPressed="@color/white_pressed"
+        fab:fab_addButtonPlusIconColor="@color/half_black"
+        fab:fab_expandDirection="up"
+        fab:fab_labelStyle="@style/menu_labels_style"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <toan.android.floatingactionmenu.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="@color/white"
+            fab:fab_colorPressed="@color/white_pressed"
+            fab:fab_icon="@android:drawable/ic_menu_save"
+            fab:fab_title="Grabar Audio"/>
+
+        <toan.android.floatingactionmenu.FloatingActionButton
+            android:id="@+id/button_remove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="@color/white"
+            fab:fab_colorPressed="@color/white_pressed"
+            fab:fab_icon="@android:drawable/ic_delete"
+            fab:fab_title="Borrar audio"/>
+
+    </toan.android.floatingactionmenu.FloatingActionsMenu>
+
+</RelativeLayout>
